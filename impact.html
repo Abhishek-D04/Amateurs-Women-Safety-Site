@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amateurs - Impact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add animation styles */
+        .impact-box {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .impact-box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .impact-data {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .impact-box {
+            background-color: #f3f4f6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .impact-box h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .impact-box p {
+            margin: 0;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="login.html">Login & Verify</a></li>
+                </ul>
+            </nav>
+            <h1>Impact</h1>
+            <p>Discover how Amateurs is making a difference in women's safety across the globe.</p>
+        </header>
+
+        <section class="impact-data">
+            <div class="impact-box">
+                <h3>Global Reach</h3>
+                <p>We have helped <strong>over 500,000 women</strong> feel safer by providing immediate emergency solutions.</p>
+            </div>
+            <div class="impact-box">
+                <h3>AI-Based Alerts</h3>
+                <p>Our AI-based alert system has detected and averted <strong>3,000+ potential dangers</strong> globally.</p>
+            </div>
+            <div class="impact-box">
+                <h3>Community Support</h3>
+                <p>Over <strong>10,000 volunteers</strong> are actively involved in providing real-time assistance through our platform.</p>
+            </div>
+            <div class="impact-box">
+                <h3>Expanding Coverage</h3>
+                <p>We are now available in <strong>50+ countries</strong>, ensuring that women across the world can access our safety solutions.</p>
+            </div>
+        </section>
+        <!-- Moving testimonials code-->
+        <section class="testimonials">
+            <h2 style="text-align: center;">'Real Stories, Real Impact' </h2>
+            <div class="testimonial-container">
+                <div class="testimonial-slide active">
+                    <p style="text-align: center;" ><strong>Priya, 27</strong>: "Amateurs saved me during a critical moment. I will always be thankful."</p>
+                </div>
+                <div class="testimonial-slide">
+                    <p style="text-align: center;"><strong>Anita, 34</strong>: "The emergency mode gave me peace of mind when walking home late at night."</p>
+                </div>
+                <!-- Add more testimonial slides here -->
+                <div class="testimonial-slide">
+                    <p style="text-align: center;"><strong>Anita, 39</strong>: "The emergency mode gave me peace of mind when walking home late at night."</p>
+                </div>
+            </div>
+            <div class="testimonial-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- Add more dots here corresponding to the number of testimonials -->
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>Amateurs &copy; 2024. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Script to animate the boxes
+        document.addEventListener("DOMContentLoaded", () => {
+            const boxes = document.querySelectorAll('.impact-box');
+            let delay = 0;
+            boxes.forEach((box, index) => {
+                setTimeout(() => {
+                    box.classList.add('show');
+                }, delay);
+                delay += 300; // Stagger the animations by 300ms
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

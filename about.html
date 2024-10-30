@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Amateurs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for expandable sections */
+        .box {
+            background-color: #df8db5; /* Light grey background */
+            border: 1px solid #88c3e6; /* Slightly darker grey border */
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 1rem;
+            display: none;
+        }
+
+        .box.active p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="login.html">Login & Verify</a></li>
+                </ul>
+            </nav>
+            <h1>About Us</h1>
+            <p>Our mission is to create a safer world for women by integrating advanced technology with a deep understanding of their unique safety needs. We are dedicated to developing innovative solutions that empower women to navigate their lives with confidence and security. By leveraging state-of-the-art tools and continuously improving our technology, we aim to address the pressing safety concerns that women face daily. Our commitment extends beyond merely providing tools; we strive to foster a supportive community that prioritizes women’s safety and well-being. We believe that every woman deserves to feel safe and secure, and we are devoted to making this a reality through our unwavering dedication, ongoing research, and user-centric design. Together, we envision a future where safety is guaranteed and fear is a thing of the past.</p>
+        </header>
+
+        <section class="about-section">
+            <div class="box" id="who-we-are">
+                <h2>Who We Are?</h2>
+                <p>We are a dedicated team of first-year college students from CGC Jhanjheri Mohali, united by our passion for enhancing women’s safety through innovative technological solutions. Our team, comprised of Abhishek, Navneet, Lucky, Dronacharya, Aryan, and Anjali, is driven by a shared vision to make a meaningful impact in the realm of personal safety. With our diverse skills and collaborative spirit, we are committed to developing cutting-edge solutions that address the unique challenges faced by women. Our collective goal is to leverage our technical expertise and creativity to create practical and effective tools that ensure safer environments for women everywhere. By combining our academic knowledge with a genuine desire to drive positive change, we aim to contribute to a world where every woman feels secure and empowered.</p>
+            </div>
+            <div class="box" id="our-vision">
+                <h2>Our Vision</h2>
+                <p>Our vision is to empower every woman with the confidence and tools necessary to ensure her safety in any environment. We aspire to create a world where women can navigate their daily lives without fear, fully confident in their ability to protect themselves and seek help when needed. By harnessing the power of technology and innovation, we aim to develop comprehensive safety solutions that are accessible, effective, and user-friendly. Our goal is to build a supportive community where women are not only protected but also empowered to live their lives freely and securely. Through our efforts, we envision a future where safety is a fundamental right for all women.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Want to know more about us? <a href="mailto:info@amateurs.com">Contact us</a>.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript for expanding/collapsing boxes
+        document.addEventListener("DOMContentLoaded", () => {
+            const boxes = document.querySelectorAll('.box');
+
+            boxes.forEach(box => {
+                box.addEventListener('click', () => {
+                    box.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
